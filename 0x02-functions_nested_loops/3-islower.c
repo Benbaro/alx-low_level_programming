@@ -1,31 +1,11 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - finds and prints the sum of the even-valued terms
- * followed by a new line
- * Return: Always 0 (Success)
+ * _islower - checks for lowercase character
+ * @c: the character to check
+ * Return: 1 if c is lowercase, 0 otherwise
  */
-int main(void)
+int _islower(int c)
 {
-	int i;
-	unsigned long int j, k, next, sum;
-
-	j = 1;
-	k = 2;
-	sum = 0;
-
-	for (i = 1; i <= 33; ++i)
-	{
-		if (j < 4000000 && (j % 2) == 0)
-		{
-			sum = sum + j;
-		}
-		next = j + k;
-		j = k;
-		k = next;
-	}
-
-	printf("%lu\n", sum);
-
-	return (0);
+	return (c >= 'a' && c <= 'z');
 }
